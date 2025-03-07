@@ -1,12 +1,55 @@
-# React + Vite
+# How ❓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+어떻게 이게 모던 Javascript 유틸리티 라이브러리?
 
-Currently, two official plugins are available:
+# How how?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+npm i How
+```
 
-## Expanding the ESLint configuration
+or
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+yarn add How
+```
+
+# How Features
+
+- array : 배열을 다루기 위한 함수들 제공
+- function : 함수 호출을 다루는 함수를 제공
+- number : 숫자를 다루는 함수를 제공
+- object : 객체의 관한 함수를 제공
+- string : 문자열에 관한 함수를 제공
+- util : 날짜를 비롯한 유틸 함수를 제공
+
+# How status
+
+- Array
+  - [ ] : indexOf
+  - [ ] : countBy
+  - [ ] : findIndex
+  - [ ] : sortedLastIndexOf
+  - [ ] : hasExample
+  - [ ] : groupBy
+- Function
+  - [ ] : pipe
+  - [ ] : flow
+  - [ ] : partition
+- Number
+  - [ ] : clamp
+  - [ ] : isEven
+  - [ ] : isOdd
+- Object
+  - [ ] : pick
+  - [ ] : omit
+- String
+  - [ ] : padStart
+  - [ ] : padEnd
+  - [ ] : repeat
+  - [ ] : truncate
+- Utils
+  - [ ] : YYYY-MM-DD”으로 포맷팅 함수
+  - [ ] : 두 날짜 사이의 일 수 구하기 함수
+  - [ ] : 일 수 더하거나 빼기 함수
+  - [ ] : toNumber

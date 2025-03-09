@@ -19,7 +19,6 @@ export default [
       ...js.configs.recommended.rules, // 기본 ESLint 권장 규칙 적용
       'no-unused-vars': 'warn', // 사용되지 않는 변수는 경고
       'no-console': 'warn', // console.log() 사용 경고
-      'no-magic-numbers': 'off', // 매직 넘버 사용을 경고, 0과 1은 제외
       eqeqeq: 'warn' // 일치 연산자(===, !==) 사용을 권장
     }
   }

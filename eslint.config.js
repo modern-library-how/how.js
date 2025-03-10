@@ -8,7 +8,7 @@ export default [
   {
     files: ['**/*.{js,ts,jsx,ts}'], // JavaScript 및 TypeScript 파일 검사
     languageOptions: {
-      ecmaVersion: 2020, // 최신 JavaScript 버전 사용
+      ecmaVersion: ESNext, // 최신 JavaScript 버전 사용
       globals: globals.browser, // 브라우저 환경에서 사용할 전역 변수
       parserOptions: {
         ecmaVersion: 'latest', // 최신 ECMAScript 버전 사용

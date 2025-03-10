@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 최신 ECMAScript 기능을 그대로 사용
+    "module": "ESNext", // ESModules로 모듈 처리
+    "moduleResolution": "Node", // Node.js 모듈 해석 방식
+    "lib": ["ESNext", "DOM"], //ESNext와 DOM 타입 포함
+    "strict": true, // 타입 체크를 엄격히 하여 오류를 줄일 수 있어
+    "esModuleInterop": true, // ES 모듈과 CommonJS 모듈의 호환성 보장
+    "skipLibCheck": true, // 라이브러리 타입 검사 건너뛰기
+    "noEmit": true, // 컴파일할 때 .js 파일 같은 출력물을 생성하지 않도록 막아주는 기능
+    "allowImportingTsExtensions": false, // .ts 파일을 **import**할 때 확장자를 명시적으로 작성할 수 있도록 허용
+    "forceConsistentCasingInFileNames": true // 파일 이름의 대소문자 일관성을 강제하는 옵션
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

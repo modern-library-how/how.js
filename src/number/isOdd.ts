@@ -5,6 +5,6 @@
  */
 export function isOdd(numberToCheck: number): boolean {
   if (!Number.isInteger(numberToCheck)) return false;
-  if (numberToCheck === Infinity || numberToCheck === -Infinity) return false;
+  if (!Number.isFinite(numberToCheck)) return false;
   return numberToCheck % 2 !== 0;
 }

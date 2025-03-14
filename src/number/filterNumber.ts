@@ -10,10 +10,5 @@ export default function filterNumber(value: string): number {
 
   const removedStrValue = value.replace(regex, '');
 
-  if (removedStrValue.length === 0) {
-    return NaN;
-  }
-
-  const filteredNumber = Number(removedStrValue);
-  return filteredNumber;
+  return removedStrValue.length === 0 ? NaN : Number(removedStrValue);
 }

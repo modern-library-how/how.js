@@ -1,4 +1,11 @@
-function getSubsets<T>(arr: T[]): T[][] {
+/**
+ * 배열의 모든 부분집합을 반환하는 함수
+ *
+ * @param arr - 주어진 배열
+ * @returns 배열의 부분집합
+ */
+
+export function getSubsets<T>(arr: T[]): T[][] {
   const N: number = arr.length;
   const subsetArr: T[][] = [];
   for (let i = 0; i < 1 << N; i++) {
@@ -12,6 +19,3 @@ function getSubsets<T>(arr: T[]): T[][] {
   }
   return subsetArr;
 }
-
-console.log(getSubsets([1, 2, 3]));
-console.log(getSubsets(['hi', 'bye']));

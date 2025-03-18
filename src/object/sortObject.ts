@@ -10,7 +10,7 @@
 export function sortObject<T extends Record<string, string | number>>(
   arr: T[],
   key: keyof T,
-  ascending: boolean = true
+  isAscending: boolean = true
 ): T[] {
   if (arr.length === 0) {
     return [];
@@ -18,9 +18,9 @@ export function sortObject<T extends Record<string, string | number>>(
 
   return arr.sort((a, b) => {
     if (typeof a[key] === 'string' && typeof b[key] === 'string') {
-      return ascending ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
+      return isAscending ? a[key].localeCompare(b[key]) : b[key].localeCompare(a[key]);
     }
 
-    return ascending ? (a[key] > b[key] ? 1 : -1) : b[key] > a[key] ? 1 : -1;
+    return isAscending ? (a[key] > b[key] ? 1 : -1) : b[key] > a[key] ? 1 : -1;
   });
 }

@@ -17,6 +17,12 @@ describe('isEmpty 함수 테스트', () => {
     expect(isEmpty('hello wrold')).toBe(false);
   });
 
+  test('인자가 number형일 때', () => {
+    expect(isEmpty(0)).toBe(false);
+    expect(isEmpty(0)).toBe(false);
+    expect(isEmpty(NaN)).toBe(false);
+  });
+
   test('인자가 boolean일 때', () => {
     expect(isEmpty(true)).toBe(false);
     expect(isEmpty(false)).toBe(false);
@@ -47,4 +53,14 @@ describe('isEmpty 함수 테스트', () => {
       return a + b;
     })
   ).toBe(false);
+
+  test('인자가 Set,Map일 때', () => {
+    const pianist = new Map();
+    pianist.set('name', 'yunchanLim');
+
+    expect(isEmpty(new Set([1, 2, 3]))).toBe(false);
+    expect(isEmpty(new Set())).toBe(true);
+    expect(isEmpty(new Map())).toBe(true);
+    expect(isEmpty(pianist)).toBe(false);
+  });
 });

@@ -20,7 +20,7 @@ describe('isEmpty 함수 테스트', () => {
   test('인자가 number형일 때', () => {
     expect(isEmpty(0)).toBe(false);
     expect(isEmpty(0)).toBe(false);
-    expect(isEmpty(NaN)).toBe(false);
+    expect(isEmpty(NaN)).toBe(true);
   });
 
   test('인자가 boolean일 때', () => {

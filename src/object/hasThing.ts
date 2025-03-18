@@ -14,15 +14,16 @@
  */
 
 export function hasThing<T, A, K extends keyof A>(thing: T, array: (A | T)[][], key?: K): (A | T)[] {
+  const flatArray = array.flat(Infinity) as (A | T)[];
   if (
     key !== undefined &&
-    array.flat(Infinity).every((item) => {
+    flatArray.every((item) => {
       typeof item === 'object' && item !== null && !(key in item);
     })
   ) {
     return [];
   }
-  return array.flat(Infinity).filter((item): item is A | T => {
+  return flatArray.filter((item): item is A | T => {
     if (typeof item === 'object' && item !== null && key !== undefined) {
       return key in item && (item as A)[key] === thing;
     }

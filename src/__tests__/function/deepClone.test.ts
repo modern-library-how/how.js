@@ -2,6 +2,12 @@ import { describe, expect, test } from 'vitest';
 import { deepClone } from '../../function/deepClone';
 
 describe('deepClone 테스트', () => {
+  test('원시 타입이 인자로 주어졌을 때', () => {
+    expect(deepClone(123)).toBe(123);
+    expect(deepClone('clone')).toBe('clone');
+    expect(deepClone(true)).toBe(true);
+    expect(deepClone(null)).toBe(null);
+  });
   test('객체를 깊은 복사했을 때 중첩된 프로퍼티도 서로 다른 값을 참조해야 한다.', () => {
     const obj = {
       a: 1,

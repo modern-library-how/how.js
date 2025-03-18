@@ -1,13 +1,17 @@
-export function deepClone<T>(obj: T): T {
-  if (obj === null || typeof obj !== 'object') return obj;
+type Primitive = string | number | boolean | null | undefined;
+type CloneableObject = { [key: string]: CloneableValue } | CloneableValue[];
+type CloneableValue = Primitive | CloneableObject;
 
-  if (Array.isArray(obj)) {
-    return obj.map((item) => deepClone(item)) as T;
+export function deepClone<T extends CloneableValue>(source: T): T {
+  if (source === null || typeof source !== 'object') return source;
+
+  if (Array.isArray(source)) {
+    return source.map((item) => deepClone(item)) as T;
   }
 
-  let clonedObj: Record<string, any> = {};
-  for (const key in obj) {
-    clonedObj[key] = deepClone(obj[key]);
+  let clonedSource: Record<string, any> = {};
+  for (const key in source) {
+    clonedSource[key] = deepClone(source[key]);
   }
-  return clonedObj as T;
+  return clonedSource as T;
 }

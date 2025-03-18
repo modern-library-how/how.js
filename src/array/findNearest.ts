@@ -13,7 +13,7 @@ export function findNearest(arr: number[], value: number): number | undefined {
   }
 
   let nearestNum = arr[0];
-  let minDiff = Math.abs(arr[0] - value);
+  let minDiff = Math.abs(nearestNum - value);
 
   for (let i = 1; i < arr.length; i++) {
     const diff = Math.abs(arr[i] - value);
@@ -28,8 +28,3 @@ export function findNearest(arr: number[], value: number): number | undefined {
   }
   return nearestNum;
 }
-
-console.log(findNearest([10, 20, 30, 40], 25));
-console.log(findNearest([-10, -5, 0, 5, 10], -3));
-console.log(findNearest([42], 10));
-console.log(findNearest([1.2, 3.5, 7.8], 5.0));

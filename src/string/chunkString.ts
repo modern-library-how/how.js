@@ -8,15 +8,15 @@
  */
 
 export function chunkString(str: string, splitNum: number, separator: string): string {
-  const N = str.length;
+  const strLength = str.length;
 
   if (splitNum <= 0) return str;
-  if (!isFinite(splitNum)) return str;
-  if (N <= splitNum) return str;
+  if (!isFinite(splitNum) || !Number.isInteger(splitNum)) return str;
+  if (strLength <= splitNum) return str;
 
   const result: string[] = [];
 
-  for (let i = 0; i < N; i += splitNum) {
+  for (let i = 0; i < strLength; i += splitNum) {
     result.push(str.slice(i, i + splitNum));
   }
 

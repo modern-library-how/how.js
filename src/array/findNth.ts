@@ -26,8 +26,3 @@ export function findNth<T>(arr: Array<T>, searchElement: T, searchIdx: number = 
 
   return NaN;
 }
-
-console.log(findNth([1, 2, 3, 4, 5, 1, 3, 4], 2));
-console.log(findNth([1, 2, 3, 4, 5, 1, 3, 4], 2, 1));
-console.log(findNth([1, 2, 2, 4, 5, 1, 3, 4], 2, 3));
-console.log(findNth(['hello', 'h', 'hi', 'h', 'h', 'hell'], 'h', 3));

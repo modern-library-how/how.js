@@ -1,5 +1,4 @@
-import { expect } from 'vitest';
-import { describe, test } from 'vitest';
+import { expect, describe, test } from 'vitest';
 import { findNearest } from '../../array/findNearest';
 
 describe('findNearest 테스트', () => {

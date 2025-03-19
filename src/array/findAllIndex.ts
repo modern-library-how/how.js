@@ -11,11 +11,6 @@ export function findAllIndex<T>(arr: Array<T>, equalValue: T): number[] {
     return [];
   }
 
-  const indexArr: number[] = [];
-  arr.forEach((value, idx) => {
-    if (value === equalValue) {
-      indexArr.push(idx);
-    }
-  });
+  const indexArr: number[] = arr.map((value, idx) => (value === equalValue ? idx : -1)).filter((idx) => idx !== -1);
   return indexArr;
 }

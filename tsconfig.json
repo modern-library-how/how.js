@@ -24,5 +24,12 @@
     "forceConsistentCasingInFileNames": true // 파일 이름의 대소문자 일관성을 강제하는 옵션
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests", // 테스트 폴더 제외
+    "__tests__", // Jest 스타일 테스트 폴더 제외
+    "**/*.test.ts", // 특정 테스트 파일 패턴 제외
+    "**/*.spec.ts"
+  ]
 }

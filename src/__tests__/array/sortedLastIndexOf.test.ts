@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import sortedLastIndexOf from '../../array/sortedLastIndexOf';
+import { sortedLastIndexOf } from '../../array/sortedLastIndexOf';
 
 describe('sortedLastIndexOf', () => {
   test('정렬된 숫자 배열에서 마지막 인덱스 반환', () => {

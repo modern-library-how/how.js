@@ -1,5 +1,3 @@
-import isSorted from './isSorted';
-
 /**
  * 선택한 요소의 마지막 index찾기
  * @param {Array} arr
@@ -7,8 +5,10 @@ import isSorted from './isSorted';
  * @returns {number}
  */
 
-export default function sortedLastIndexOf<T>(arr: T[], i: T) {
-  const sorted = isSorted(arr);
+import { isSorted } from './isSorted';
+
+export function sortedLastIndexOf<T extends number | string>(arr: T[], i: T) {
+  const sorted = isSorted<T>(arr as T[] & (number[] | string[]));
   if (sorted) {
     let start: number = 0;
     let end: number = arr.length - 1;

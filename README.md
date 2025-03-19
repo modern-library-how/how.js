@@ -30,7 +30,7 @@ yarn add How
   - [ ] : countBy
   - [ ] : findIndex
   - [ ] : sortedLastIndexOf
-  - [ ] : hasExample
+  - [ ] : hasThing
   - [ ] : groupBy
 - Function
   - [ ] : pipe

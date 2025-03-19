@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import isSorted from '../../object/isSorted';
+import isSorted from '../../array/isSorted';
 
 describe('isSorted', () => {
   test('오름차순 true', () => {

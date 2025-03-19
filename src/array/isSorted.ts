@@ -4,7 +4,7 @@
  * @returns {boolean}
  */
 
-export default function isSorted<T extends number | string>(arr: T[] & (number[] | string[])): boolean {
+export function isSorted<T extends number | string>(arr: T[] & (number[] | string[])): boolean {
   let isAscending = true;
   let isDescending = true;
 

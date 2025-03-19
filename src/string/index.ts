@@ -1,0 +1,1 @@
+export { chunkString } from './chunkString';

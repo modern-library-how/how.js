@@ -5,7 +5,7 @@
  * @returns {number}
  */
 
-export default function filterNumber(value: string): number {
+export function filterNumber(value: string): number {
   let regex: RegExp = /[^0-9]/g;
 
   const removedStrValue = value.replace(regex, '');

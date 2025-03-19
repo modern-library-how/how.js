@@ -4,9 +4,15 @@
  * @returns {boolean}
  */
 
-export default function isSorted<T>(arr: T[]): boolean {
-  const ascending = arr.every((_, i) => i === 0 || arr[i - 1] <= arr[i]);
-  const descending = arr.every((_, i) => i === 0 || arr[i - 1] >= arr[i]);
+export default function isSorted<T extends number | string>(arr: T[] & (number[] | string[])): boolean {
+  let isAscending = true;
+  let isDescending = true;
 
-  return ascending || descending;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i - 1] < arr[i]) isAscending = false;
+    if (arr[i - 1] > arr[i]) isDescending = false;
+
+    if (!isAscending && !isDescending) return false;
+  }
+  return true;
 }

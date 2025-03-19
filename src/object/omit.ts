@@ -1,15 +1,18 @@
 /**
  * 원하는 key를 제외한 Object를 보여주는 함수
- * @template T - The type of object
- * @template K - The type of Keys in object
- * @param {T} obj - The object to omit keys from
- * @param {K[]} keys - An array of keys to be omitted from the object
- * @returns {Omit <T, K>} A new object with the specified keys omitted
+ *
+ * @template T - 객체의 타입
+ * @template K - 객체 내 키의 타입
+ * @param obj - 특정 키를 제외할 대상 객체 (예: { a: 2, b: 3, c: 5 })
+ * @param keys - 제거할 키들의 배열 (예: ["b", "c"])
+ * @returns 지정한 키들이 제거된 새로운 객체 (예: { a: 2 })
  *
  * @example
- * const object = {a: 2, b: 3, c: 5};
+ * ```ts
+ * const object = { a: 2, b: 3, c: 5 };
  * const omittedObject = omit(object, ["b", "c"]);
- * // omittedObject = {a: 1};
+ * // omittedObject = { a: 2 }
+ * ```
  */
 
 export const omit = <T extends object, K extends keyof T>(obj: T, keys: K[]): Omit<T, K> => {
